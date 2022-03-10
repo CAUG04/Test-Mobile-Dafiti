@@ -1,0 +1,310 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="bootstrap-icons/font/bootstrap-icons.css"><!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.11.3/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.11.3/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.11.3/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
+<!--CHART.JS-->
+<script src="chartjs/chart.js"></script>
+<script src="chartjs/chartjs-plugin-datalabels@2.0.0"></script>
+<script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
+<!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle"></span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="2ed616cf48e08695032759a0b3e15001ffac657f0975bfc5f4df4db921a8d654.html">Cart Operations</a></span>
+                > <span class="truncate-60"><a
+                    href="11ff5a4abf9aab204c457fe3b022fce0dbf8a0b1ce71b3ea16e1195b041d8adb.html">the user can create a new account, add a item and verify the item </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 09-03-2022 23:37</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
+                                    <span class="story-header-title">Cart Operations </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-x-circle-fill failure-icon fa-2x' title='FAILURE'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="failing-color">the user can create a new account, add a item and verify the item
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+            <div class="screenshotFailure panel panel-danger">
+    <div style="display:block">
+        <div class="table">
+            <div class="row">
+                <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
+                    <span class="error-message error-message-title">Element should be present exception: Expected condition failed: waiting for By.xpath: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.FrameLayout/androidx.recyclerview.widget.RecyclerView/android.widget.FrameLayout[3]/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ImageView to be present (tried for 5 second(s) with 100 milliseconds interval)Build info: version: '4.1.2', revision: '9a5a329c5a'System info: host: 'TEKUSPC37', ip: '192.168.1.9', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.2'Driver info: driver.version: unknown</span>
+                </div>
+                <div class="col-sm-2">
+                    <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-overall"
+                       role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="bi bi-eye"></i> More details</a>
+                </div>
+             </div>
+        </div>
+    <div>
+
+    <!-- Details Section -->
+    <div class="row stacktrace-details">
+      <div class="col">
+        <div class="collapse multi-collapse" id="stacktraceModal-overall">
+            <div class="card">
+                <div class="card-header">
+                    <h4>net.thucydides.core.webdriver.exceptions.ElementShouldBePresentException </h4>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <pre>dafiti.tasks.Add.performAs(Add.java:14)<br />dafiti.stepdefinitions.CartStepDefinitions.heAddsTheProductToTheCartWith(CartStepDefinitions.java:43)<br />io.cucumber.java.Invoker.doInvoke(Invoker.java:66)<br />io.cucumber.java.Invoker.invoke(Invoker.java:24)<br />io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)<br />io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)<br />io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)<br />io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)<br />io.cucumber.core.runner.TestStep.executeStep(TestStep.java:86)<br />io.cucumber.core.runner.TestStep.run(TestStep.java:57)<br />io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)<br />io.cucumber.core.runner.TestCase.run(TestCase.java:95)<br />io.cucumber.core.runner.Runner.runPickle(Runner.java:75)<br />io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$3(CucumberExecutionContext.java:151)<br />io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)<br />io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:151)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)<br />io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)<br />io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java:259)<br />io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java:58)<br /></pre>
+                    </div>
+
+                    <h4>
+                        Caused by: org.openqa.selenium.TimeoutException
+                    </h4>
+                    <div>
+                            <pre>Expected condition failed: waiting for By.xpath: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.FrameLayout/androidx.recyclerview.widget.RecyclerView/android.widget.FrameLayout[3]/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ImageView to be present (tried for 5 second(s) with 100 milliseconds interval)<br>Build info: version: '4.1.2', revision: '9a5a329c5a'<br>System info: host: 'TEKUSPC37', ip: '192.168.1.9', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.2'<br>Driver info: driver.version: unknown</pre>
+                        <pre>dafiti.tasks.Add.performAs(Add.java :14)<br />dafiti.stepdefinitions.CartStepDefinitions.heAddsTheProductToTheCartWith(CartStepDefinitions.java :43)<br />io.cucumber.java.Invoker.doInvoke(Invoker.java :66)<br />io.cucumber.java.Invoker.invoke(Invoker.java :24)<br />io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java :47)<br />io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java :29)<br />io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java :66)<br />io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java :63)<br />io.cucumber.core.runner.TestStep.executeStep(TestStep.java :86)<br />io.cucumber.core.runner.TestStep.run(TestStep.java :57)<br />io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java :51)<br />io.cucumber.core.runner.TestCase.run(TestCase.java :95)<br />io.cucumber.core.runner.Runner.runPickle(Runner.java :75)<br />io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$3(CucumberExecutionContext.java :151)<br />io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java :23)<br />io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java :151)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java :144)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java :28)<br />io.cucumber.junit.FeatureRunner.run(FeatureRunner.java :137)<br />io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java :259)<br />io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java :58)<br /></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+                <div class="panel-body">
+                    <a href="pagesource12083522157574865426.html" target="_blank" class="btn btn-info">HTML Source</a>
+                </div>
+            </div>
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="6f5a91ef6354973a7ae26cc63d08d9f0054b764a91092db9fb7dac5174ee5c7e.png" title=" Given the user open the app Dafiti" width="1080"/>
+                <img src="7d8d5efbf2daa677fbb4f426ef85ecbcaf4be1e7e67aeb1978003e5c255d66ef.png" title=" When the user create a new account
+| email | password | documentType | id | name | lastName | birtDate | gender |
+| c.urreeegg@test.com | 123456* | CC | 10101010 | Carlos | Urrego | 04/11/1990 | Masculino |" width="1080"/>
+                <img src="7d8d5efbf2daa677fbb4f426ef85ecbcaf4be1e7e67aeb1978003e5c255d66ef.png" title=" user clicks on Section Men" width="1080"/>
+                <img src="433df645d67f09da9efea0eede99f2903e1264b4fcab5bc676ca7876aab26099.png" title=" user clicks on Section Men (completed)" width="1080"/>
+                <img src="433df645d67f09da9efea0eede99f2903e1264b4fcab5bc676ca7876aab26099.png" title=" user clicks on Section Men" width="1080"/>
+                <img src="3957b9ad43a90534a49f8a12accd20f33c7628645f5158182748afe5d7a1b8f1.png" title=" user clicks on Section Men (completed)" width="1080"/>
+                <img src="3957b9ad43a90534a49f8a12accd20f33c7628645f5158182748afe5d7a1b8f1.png" title=" user clicks on Label Account" width="1080"/>
+                <img src="bab84a1fcd404eaabddfe25409bd243a7b3cfcbbd877c9e0ac8aedb1d4ebabf7.png" title=" user clicks on Label Account (completed)" width="1080"/>
+                <img src="bab84a1fcd404eaabddfe25409bd243a7b3cfcbbd877c9e0ac8aedb1d4ebabf7.png" title=" user clicks on  Get In" width="1080"/>
+                <img src="07fdc956141f020bf60bddef4aa07ad20801afbd708a67fde3c3982077de52c1.png" title=" user clicks on  Get In (completed)" width="1080"/>
+                <img src="07fdc956141f020bf60bddef4aa07ad20801afbd708a67fde3c3982077de52c1.png" title=" user clicks on Create Account" width="1080"/>
+                <img src="c7847cc0b90598177005da9719f5c63b1479f3fe67f99c35bf5c5706da869068.png" title=" user clicks on Create Account (completed)" width="1080"/>
+                <img src="c7847cc0b90598177005da9719f5c63b1479f3fe67f99c35bf5c5706da869068.png" title=" user enters 'c.urreeegg@test.com' into E-mail" width="1080"/>
+                <img src="946fb416a7496eeda5168ea7b785d7c63922036d639e2f97a9e668285f27fa0e.png" title=" user enters 'c.urreeegg@test.com' into E-mail (completed)" width="1080"/>
+                <img src="946fb416a7496eeda5168ea7b785d7c63922036d639e2f97a9e668285f27fa0e.png" title=" user enters '123456*' into Password" width="1080"/>
+                <img src="1e00b3ab102987317765a4b6d29c13854cef7565481fedba5afb326ce2c1d3ce.png" title=" user enters '123456*' into Password (completed)" width="1080"/>
+                <img src="1e00b3ab102987317765a4b6d29c13854cef7565481fedba5afb326ce2c1d3ce.png" title=" user enters '123456*' into Confirmate Password" width="1080"/>
+                <img src="947ab4fb3d154147b5ee0b8e926d1f6b0ca3d58245785f5023a96a58582d6bc2.png" title=" user enters '123456*' into Confirmate Password (completed)" width="1080"/>
+                <img src="947ab4fb3d154147b5ee0b8e926d1f6b0ca3d58245785f5023a96a58582d6bc2.png" title=" user clicks on Document Type" width="1080"/>
+                <img src="fcc9a26d3243a964fee5e9d04db037581de69d9f33eaa3a70b6fefb05a2b8ef9.png" title=" user clicks on Document Type (completed)" width="1080"/>
+                <img src="fcc9a26d3243a964fee5e9d04db037581de69d9f33eaa3a70b6fefb05a2b8ef9.png" title=" user clicks on Select document type" width="1080"/>
+                <img src="bd8fded353b06432b46cff2dacb3a0a4ef114038ffdc1ec5385bf51dae619904.png" title=" user clicks on Select document type (completed)" width="1080"/>
+                <img src="bd8fded353b06432b46cff2dacb3a0a4ef114038ffdc1ec5385bf51dae619904.png" title=" user enters '10101010' into Id" width="1080"/>
+                <img src="ba3cdac8645b89df43a8830608c98d8a7cc9c0d05af42107e0812210e4b61253.png" title=" user enters '10101010' into Id (completed)" width="1080"/>
+                <img src="ba3cdac8645b89df43a8830608c98d8a7cc9c0d05af42107e0812210e4b61253.png" title=" user enters 'Carlos' into first name" width="1080"/>
+                <img src="4d08510d67256e9ba94e01c44ccd8d26dd6b58ad2b5cb073e627bc1f7e5b801f.png" title=" user enters 'Carlos' into first name (completed)" width="1080"/>
+                <img src="4d08510d67256e9ba94e01c44ccd8d26dd6b58ad2b5cb073e627bc1f7e5b801f.png" title=" user enters 'Urrego' into Last name" width="1080"/>
+                <img src="1aafe0cd96fda9fb5e03f70ecaa69d582d07a21e31de775e5ea739752d11c218.png" title=" user enters 'Urrego' into Last name (completed)" width="1080"/>
+                <img src="1aafe0cd96fda9fb5e03f70ecaa69d582d07a21e31de775e5ea739752d11c218.png" title=" user enters '04/11/1990' into Birt Date" width="1080"/>
+                <img src="63e78d6fa9a088c08d8a20623b0419fac8782419c5b57639adda7da0390b7d5a.png" title=" user enters '04/11/1990' into Birt Date (completed)" width="1080"/>
+                <img src="63e78d6fa9a088c08d8a20623b0419fac8782419c5b57639adda7da0390b7d5a.png" title=" user clicks on Gender" width="1080"/>
+                <img src="8dca7b85d0b1c39cd912071c2a7aa9f97a460209275d16c02b29de602949dd2f.png" title=" user clicks on Gender (completed)" width="1080"/>
+                <img src="8dca7b85d0b1c39cd912071c2a7aa9f97a460209275d16c02b29de602949dd2f.png" title=" user clicks on Select gender" width="1080"/>
+                <img src="28ffc58e98b5bcf360d631ed99482ef642dfed74843177a97459ae63000f1d82.png" title=" user clicks on Select gender (completed)" width="1080"/>
+                <img src="28ffc58e98b5bcf360d631ed99482ef642dfed74843177a97459ae63000f1d82.png" title=" user clicks on Save data" width="1080"/>
+                <img src="230aac291c8e583229d5ee936fe687d22f8c0a133733e405a15cb2e2320836c2.png" title=" user clicks on Save data (completed)" width="1080"/>
+                <img src="3c42c693f8e8f6044e8e3c0aa69a9584776bbe250fe6c30a9abd8d643d41a281.png" title=" When the user create a new account
+| email | password | documentType | id | name | lastName | birtDate | gender |
+| c.urreeegg@test.com | 123456* | CC | 10101010 | Carlos | Urrego | 04/11/1990 | Masculino | (completed)" width="1080"/>
+                <img src="3c42c693f8e8f6044e8e3c0aa69a9584776bbe250fe6c30a9abd8d643d41a281.png" title=" And he adds the product to the cart with" width="1080"/>
+                <img src="3c42c693f8e8f6044e8e3c0aa69a9584776bbe250fe6c30a9abd8d643d41a281.png" title=" User add" width="1080"/>
+                <img src="47b4056ef81439c740a623430132c053c599d4a72c8e3999ad467944c2ef7049.png" title=" user clicks on Save data" width="1080"/>
+                <img src="47b4056ef81439c740a623430132c053c599d4a72c8e3999ad467944c2ef7049.png" title=" user clicks on Save data" width="1080"/>
+                <img src="1bca177044092338959c6404bc7b29416adf80be8f26bd156d1a8e625f7917ec.png" title=" user clicks on Save data (completed): <span class='failing-color'>FAILURE</span>" width="1080"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 3.2.0</span>
+</div>
+</body>
+</html>
