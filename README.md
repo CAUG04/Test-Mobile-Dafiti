@@ -1,5 +1,5 @@
 # Test-Mobile-Dafiti
-This project is a technical challenge with Appium Screenplay to Dafiti Apk
+This project is a technical challenge with Appium to Dafiti Apk
 
 **MOBILE AUTOMATION TESTS:**
 
