@@ -28,6 +28,10 @@
 .idea/**/uiDesigner.xml
 .idea/**/dbnavigator.xml
 
+#Serenity
+target/
+build/
+
 # Gradle
 .idea/**/gradle.xml
 .idea/**/libraries
