@@ -4,7 +4,7 @@ import net.serenitybdd.screenplay.targets.Target;
 import org.openqa.selenium.By;
 
 public class Account {
-    public static final Target GO_APP = Target.the("Section Men").locatedBy("//android.view.View[@content-desc='IR AL APP']/android.widget.TextView");
+    public static final Target GO_APP = Target.the("Go to App").locatedBy("//android.view.View[@content-desc='IR AL APP']/android.widget.TextView");
     public static final Target SECTION_MEN = Target.the("Section Men").locatedBy("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/androidx.recyclerview.widget.RecyclerView/android.widget.FrameLayout[2]/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ImageView");
     public static final Target ACCOUNT = Target.the("Label Account").locatedBy("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.LinearLayout[2]/android.widget.LinearLayout/android.widget.FrameLayout[4]/android.widget.LinearLayout/android.widget.TextView");
     public static final Target GET_IN = Target.the(" Get In").located(By.id("br.com.dafiti:id/label"));
